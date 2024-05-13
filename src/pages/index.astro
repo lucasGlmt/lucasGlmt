@@ -1,0 +1,90 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Pill from '../components/Pill.astro';
+import Section from "../components/Section.astro";
+import Link from "../components/Link.astro";
+---
+
+<Layout title="Lucas GLMT. - Développeur web">
+   <div class="container">
+       <section id="header" class="row">
+           <div class="col-sm-12 col-md-6">
+               <h1>Lucas GLMT.</h1>
+               <h3>Développeur Web</h3>
+           </div>
+           <div class="description col-sm-12 col-md-6">
+               <div>
+                   <p>Je suis un développeur web spécialisé dans le développement d'applications web et mobile full stack. Je propose également des formations sur des technologies orientées web et mobiles.</p>
+                   <div class="pills-description">
+                       <Pill>Flutter</Pill>
+                       <Pill>Typescript</Pill>
+                       <Pill>React</Pill>
+                       <Pill>Docker</Pill>
+                       <Pill>Angular</Pill>
+                       <Pill>C#</Pill>
+                       <Pill>PHP</Pill>
+                   </div>
+               </div>
+           </div>
+       </section>
+
+       <Section backgroundImagePath="/src/images/background-img.jpg">
+           <div id="discover">
+               <h3>Découvez mon travail</h3>
+               <div class="row">
+                   <div class="col-sm-6">
+                       <Link newTab href="https://github.com/lucasGlmt">
+                           Visitez mon GitHub
+                       </Link>
+                   </div>
+                   <div class="col-sm-6">
+                       <Link newTab={false} href="/projects">
+                           Découvrez mes projets
+                       </Link>
+                   </div>
+               </div>
+           </div>
+       </Section>
+   </div>
+</Layout>
+
+<style>
+	main {
+		margin: auto;
+		padding: 1rem;
+		width: 800px;
+		max-width: calc(100% - 2rem);
+		font-size: 20px;
+		line-height: 1.6;
+	}
+
+    section #header {
+        display: flex;
+    }
+
+    .description {
+        display: flex;
+        align-items: center;
+        font-size: 1.25em;
+        text-align: justify;
+    }
+
+    #header h1 {
+        margin: 5px;
+        font-size: 4em;
+    }
+
+    #header h3 {
+        font-size: 3em;
+        margin: 0;
+    }
+
+    #discover {
+        text-align: center;
+        font-size: 2em;
+    }
+
+    .pills-description {
+        text-align: end;
+    }
+</style>

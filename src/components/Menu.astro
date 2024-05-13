@@ -1,0 +1,70 @@
+<nav>
+    <ul>
+        <li id="home"><a href="/">Lucas GLMT.</a></li>
+        <li id="projects"><a href="/projects">Projets</a></li>
+        <li id="formations"><a href="/formations">Formations</a></li>
+        <li id="blog"><a href="/blog">Blog</a></li>
+    </ul>
+</nav>
+
+<script>
+    const setActive = () => {
+        const part = window.location.pathname.split("/")[1];
+        if (part == null) {
+            return;
+        }
+        document.getElementById(part)?.classList.add('active')
+    }
+
+    setActive();
+</script>
+
+<style>
+    nav {
+        padding: 0;
+        background-color: transparent;
+        margin-bottom: 20px;
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    li {
+        float: left;
+        margin-right: 5px;
+    }
+
+    .active {
+        background-color: #2B008F;
+        border-radius: 20px;
+        transition: .2s;
+    }
+
+    #home {
+        font-weight: bold;
+        font-size: larger;
+    }
+
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    li a:hover {
+        background-color: #1e0068;
+        border-radius: 20px;
+    }
+
+    li a:focus {
+        background-color: #441e97;
+        border-radius: 20px;
+    }
+
+</style>

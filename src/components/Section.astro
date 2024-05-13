@@ -1,0 +1,30 @@
+---
+interface Props {
+    backgroundImagePath: string;
+}
+
+const { backgroundImagePath } = Astro.props;
+---
+
+<section>
+    <div class="container">
+        <slot />
+    </div>
+</section>
+
+<style>
+    section {
+        padding: 30px;
+        color: white;
+    }
+
+    .container {
+        background-image: url("../images/background-img.jpg");
+        background-size: 100% auto;
+        border-radius: 20px;
+        padding: 10px 30px;
+        width: auto;
+        -webkit-box-shadow: 5px 5px 16px -7px #000000;
+        box-shadow: 5px 5px 16px -7px #000000;
+    }
+</style>

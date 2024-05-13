@@ -1,0 +1,29 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Section from "../components/Section.astro";
+import Link from "../components/Link.astro";
+---
+
+<Layout title="Lucas GLMT. - Développeur web">
+    <Section backgroundImagePath="/src/images/header-2.jpg">
+       <div class="content">
+           <h3>Mes projets</h3>
+           <Link newTab href="https://github.com/lucasGlmt">
+               Visitez mon GitHub
+           </Link>
+       </div>
+    </Section>
+    <div class="content">
+        <p>🚧🛠️ Page en construction 🛠️🚧</p>
+    </div>
+</Layout>
+
+<style>
+    h3 {
+        font-size: 2em;
+    }
+
+    .content {
+        text-align: center;
+    }
+</style>
