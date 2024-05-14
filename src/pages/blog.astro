@@ -1,6 +1,10 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Section from "../components/Section.astro";
+import Card from "../components/Card.astro";
+
+const response = await fetch('http://localhost:8080/api/v1/blog');
+const data = await response.json();
 ---
 
 <Layout title="Lucas GLMT. - Développeur web">
@@ -10,11 +14,15 @@ import Section from "../components/Section.astro";
         </div>
     </Section>
     <div class="content">
-        <p>🚧🛠️ Page en construction 🛠️🚧</p>
+        <div class="row articles">
+            {data.map((item, index) => (
+                <div class="col-sm-12 col-md-4 article">
+                    <Card title={item.title}>{item.content}</Card>
+                </div>
+            ))}
+        </div>
     </div>
 </Layout>
-
-
 
 <style>
     h3 {
@@ -22,6 +30,7 @@ import Section from "../components/Section.astro";
     }
 
     .content {
+        padding: 10px;
         text-align: center;
     }
 </style>
